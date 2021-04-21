@@ -1,0 +1,5 @@
+package com.sigsomsavath.ws.ui.controller;
+
+public class UserController {
+
+}
