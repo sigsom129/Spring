@@ -18,7 +18,7 @@ public class UserController {
 			@RequestParam(value= "limit", defaultValue = "50" ) int limit,
 			@RequestParam(value= "sort", defaultValue = "desc", required = false ) String sort)
 	{
-		return "get users was called with page = " + page + " and limit " + limit + " at page " + page;
+		return "get users was called with page = " + page + "and limit" + limit + "at page" + page;
 	}
 	
 	

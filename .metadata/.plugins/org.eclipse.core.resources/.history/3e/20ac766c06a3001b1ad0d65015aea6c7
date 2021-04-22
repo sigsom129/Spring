@@ -15,10 +15,9 @@ public class UserController {
 	
 	@GetMapping
 	public String getUser(@RequestParam(value="page") int page,
-			@RequestParam(value= "limit", defaultValue = "50" ) int limit,
-			@RequestParam(value= "sort", defaultValue = "desc", required = false ) String sort)
+			@RequestParam(value= "limit", defaultValue = "50" ) int limit)
 	{
-		return "get users was called with page = " + page + " and limit " + limit + " at page " + page;
+		return "get user was called";
 	}
 	
 	
