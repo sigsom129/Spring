@@ -771,3 +771,18 @@
 2021-04-21 20:26:57,659 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-04-21 20:26:57,659 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2021-04-21 20:26:57,659 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Sig\Desktop\Spring\mobile-app-ws\src\test\resources
+2021-04-22 00:06:49,811 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 00:06:49,812 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-22 00:06:49,813 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-04-22 00:06:49,830 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-22 00:06:49,832 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 00:06:49,832 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-22 00:06:49,832 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Sig\Desktop\Spring\mobile-app-ws\src\test\resources
+2021-04-22 00:07:00,927 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-04-22 00:10:54,016 [Worker-3: Launching mobile-app-ws-app] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 00:10:54,016 [Worker-3: Launching mobile-app-ws-app] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-22 00:10:54,020 [Worker-3: Launching mobile-app-ws-app] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-04-22 00:10:54,043 [Worker-3: Launching mobile-app-ws-app] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-22 00:10:54,047 [Worker-3: Launching mobile-app-ws-app] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-22 00:10:54,047 [Worker-3: Launching mobile-app-ws-app] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-04-22 00:10:54,047 [Worker-3: Launching mobile-app-ws-app] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Sig\Desktop\Spring\mobile-app-ws\src\test\resources

@@ -27,13 +27,8 @@ public class UserController {
 	@GetMapping(path="/{userID}")
 	public UserRest getUser(@PathVariable String userID)
 	{
-		UserRest returnValue = new UserRest();
-		returnValue.setEmail("sigstester@gmail.com");
-		returnValue.setFirstname("Sig");
-		returnValue.setLastname("Somsavath");
+		UserRest returnValue = new 
 		
-		return returnValue;
-
 	}
 	
 	@PostMapping
