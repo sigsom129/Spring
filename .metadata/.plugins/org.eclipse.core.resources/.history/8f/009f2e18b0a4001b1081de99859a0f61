@@ -1,7 +1,5 @@
 package com.sigsomsavath.ws.ui.controller;
 
-import javax.validation.Valid;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -38,19 +36,23 @@ public class UserController {
 		return new ResponseEntity<UserRest>(returnValue, HttpStatus.OK);
 	}
 
-	@PostMapping(consumes = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE }, 
-				 produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
-	public ResponseEntity<UserRest> createUser(@Valid @RequestBody UserDetailsRequestModel userDetails) 
+//	@PostMapping(consumes = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE }, 
+//				 produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
+	@PostMapping
+	public ResponseEntity<UserRest> createUser(@RequestBody UserDetailsRequestModel userDetails) 
 	{
 		UserRest returnValue = new UserRest();
-		returnValue.setEmail(userDetails.getEmail());
-		returnValue.setFirstname(userDetails.getFirstname());
-		returnValue.setLastname(userDetails.getLastname());
-
-
+		returnValue.setEmail("sigstester@gmail.com");
+		returnValue.setFirstname("Sig");
+		returnValue.setLastname("Somsavath");
 		return new ResponseEntity<UserRest>(returnValue, HttpStatus.OK);
+
 	}
 	
+//	@PostMapping()
+//	public String createUser() {
+//		return "You created a user";
+//	}
 
 	@PutMapping
 	public String updateUser() {

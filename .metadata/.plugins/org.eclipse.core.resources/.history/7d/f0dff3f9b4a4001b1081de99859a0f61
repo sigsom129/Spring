@@ -1,8 +1,6 @@
 package com.sigsomsavath.ws.ui.model.request;
 
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 public class UserDetailsRequestModel {
 	@NotNull(message = "First name can't be null")
@@ -10,10 +8,8 @@ public class UserDetailsRequestModel {
 	@NotNull(message = "Lastname can't be null")
 	private String lastname;
 	@NotNull(message = "email shouldn't be null")
-	@Email
 	private String email;
 	@NotNull(message = "can't have a null password")
-	@Size(min = 8)
 	private String password;
 
 	public UserDetailsRequestModel(String firstname, String lastname, String email, String password) {
