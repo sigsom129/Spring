@@ -13,7 +13,7 @@ public class UserDetailsRequestModel {
 	@Email
 	private String email;
 	@NotNull(message = "can't have a null password")
-	@Size(min = 8, message = "Greater than 8 length email")
+	@Size(min = 8)
 	private String password;
 
 	public UserDetailsRequestModel(String firstname, String lastname, String email, String password) {

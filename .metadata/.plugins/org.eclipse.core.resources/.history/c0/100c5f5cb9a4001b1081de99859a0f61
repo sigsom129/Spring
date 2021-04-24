@@ -1,9 +1,5 @@
 package com.sigsomsavath.ws.ui.controller;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
-
 import javax.validation.Valid;
 
 import org.springframework.http.HttpStatus;
@@ -25,9 +21,6 @@ import com.sigsomsavath.ws.ui.model.response.UserRest;
 @RestController
 @RequestMapping("/users") // http://localhost:8080/users
 public class UserController {
-	
-	
-	Map<String, UserRest> users;
 
 	@GetMapping
 	public String getUser(@RequestParam(value = "page") int page,
@@ -38,12 +31,11 @@ public class UserController {
 
 	@GetMapping(path = "/{userID}", produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<UserRest> getUser(@PathVariable String userID) {
-		if(users.containsKey(userID)) {
-			return new ResponseEntity<>(users.get(userID), HttpStatus.OK);
-		}
-		else {
-		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-		}
+		UserRest returnValue = new UserRest();
+		returnValue.setEmail("sigstester@gmail.com");
+		returnValue.setFirstname("Sig");
+		returnValue.setLastname("Somsavath");
+		return new ResponseEntity<UserRest>(returnValue, HttpStatus.OK);
 	}
 
 	@PostMapping(consumes = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE }, 
@@ -54,11 +46,6 @@ public class UserController {
 		returnValue.setEmail(userDetails.getEmail());
 		returnValue.setFirstname(userDetails.getFirstname());
 		returnValue.setLastname(userDetails.getLastname());
-		
-		String userID = UUID.randomUUID().toString();
-		returnValue.setUserId(userID);
-		if(users == null) users = new HashMap<>();
-		users.put(userID,returnValue);
 
 
 		return new ResponseEntity<UserRest>(returnValue, HttpStatus.OK);
