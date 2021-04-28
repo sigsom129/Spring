@@ -5,6 +5,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 public class UserDetailsRequestModel {
+	
 	@NotNull(message = "First name can't be null")
 	private String firstname;
 	@NotNull(message = "Lastname can't be null")

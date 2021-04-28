@@ -19,14 +19,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sigsomsavath.ws.ui.model.request.UpdateUsersDetailsRequestModel;
 import com.sigsomsavath.ws.ui.model.request.UserDetailsRequestModel;
 import com.sigsomsavath.ws.ui.model.response.UserRest;
 
 @RestController
 @RequestMapping("/users") // http://localhost:8080/users
 public class UserController {
-	
-	
+
 	Map<String, UserRest> users;
 
 	@GetMapping
@@ -38,36 +38,39 @@ public class UserController {
 
 	@GetMapping(path = "/{userID}", produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<UserRest> getUser(@PathVariable String userID) {
-		if(users.containsKey(userID)) {
+		if (users.containsKey(userID)) {
 			return new ResponseEntity<>(users.get(userID), HttpStatus.OK);
-		}
-		else {
-		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		} else {
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		}
 	}
 
-	@PostMapping(consumes = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE }, 
-				 produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
-	public ResponseEntity<UserRest> createUser(@Valid @RequestBody UserDetailsRequestModel userDetails) 
-	{
+	@PostMapping(consumes = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE }, produces = {
+			MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
+	public ResponseEntity<UserRest> createUser(@Valid @RequestBody UserDetailsRequestModel userDetails) {
 		UserRest returnValue = new UserRest();
 		returnValue.setEmail(userDetails.getEmail());
 		returnValue.setFirstname(userDetails.getFirstname());
 		returnValue.setLastname(userDetails.getLastname());
-		
+
 		String userID = UUID.randomUUID().toString();
 		returnValue.setUserId(userID);
-		if(users == null) users = new HashMap<>();
-		users.put(userID,returnValue);
-
+		if (users == null)
+			users = new HashMap<>();
+		users.put(userID, returnValue);
 
 		return new ResponseEntity<UserRest>(returnValue, HttpStatus.OK);
 	}
-	
 
-	@PutMapping
-	public String updateUser() {
-		return "update user was called";
+	@PutMapping(path="/{userID}", consumes = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE }, produces = {
+			MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+	public UserRest updateUser(@PathVariable String userID, @Valid @RequestBody UpdateUsersDetailsRequestModel userDetails) {
+		
+		UserRest storedUserDetails = users.get(userID);
+		storedUserDetails.setFirstname(userDetails.getFirstname());
+		storedUserDetails.setLastname(userDetails.getLastname());
+		
+		return storedUserDetails;
 	}
 
 	@DeleteMapping

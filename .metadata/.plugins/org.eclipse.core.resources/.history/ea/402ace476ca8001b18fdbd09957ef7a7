@@ -1,0 +1,6 @@
+package com.sigsomsavath.ws.ui.model.request;
+
+public class UpdateUsersDetailsRequestModel {
+	
+
+}
