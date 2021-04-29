@@ -38,7 +38,7 @@ public class UserController {
 
 	@GetMapping(path = "/{userID}", produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<UserRest> getUser(@PathVariable String userID) {
-//		String firstname = null;
+		String firstName = null;
 		
 		
 		if (users.containsKey(userID)) {
