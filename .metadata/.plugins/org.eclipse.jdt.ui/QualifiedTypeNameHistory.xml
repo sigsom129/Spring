@@ -41,4 +41,5 @@
     <fullyQualifiedTypeName name="com.sigsomsavath.ws.shared.Utilities"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.server.EnableEurekaServer"/>
 </qualifiedTypeNameHistroy>
