@@ -7,14 +7,12 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
-    <fullyQualifiedTypeName name="com.sigsomsavath.ws.ui.model.response.UserRest"/>
     <fullyQualifiedTypeName name="com.sigsomsavath.ws.ui.model.request.UserDetailsRequestModel"/>
     <fullyQualifiedTypeName name="com.sigsomsavath.ws.ui.controller.UserController"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
     <fullyQualifiedTypeName name="javax.validation.Valid"/>
     <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
     <fullyQualifiedTypeName name="javax.validation.constraints.Email"/>
-    <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.util.UUID"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
@@ -36,4 +34,11 @@
     <fullyQualifiedTypeName name="org.springframework.http.HttpHeaders"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
     <fullyQualifiedTypeName name="com.sigsomsavath.ws.exceptions.UserServiceExceptions"/>
+    <fullyQualifiedTypeName name="com.sigsomsavath.ws.ui.model.response.UserRest"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="com.sigsomsavath.ws.userservice.UserService"/>
+    <fullyQualifiedTypeName name="com.sigsomsavath.ws.userservice.UserServiceImplementations"/>
+    <fullyQualifiedTypeName name="com.sigsomsavath.ws.shared.Utilities"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 </qualifiedTypeNameHistroy>
