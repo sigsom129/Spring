@@ -1,5 +1,0 @@
-package com.sigsomsavath.ws.exceptions;
-
-public class UserServiceExceptions {
-
-}

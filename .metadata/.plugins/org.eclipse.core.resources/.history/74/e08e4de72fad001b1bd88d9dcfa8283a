@@ -1,5 +1,0 @@
-package com.sigsomsavath.ws.userservice;
-
-public interface UserService {
-
-}
