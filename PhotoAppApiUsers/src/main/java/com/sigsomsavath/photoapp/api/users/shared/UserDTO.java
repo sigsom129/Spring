@@ -14,7 +14,7 @@ public class UserDTO implements Serializable{
 	private String password;
 	private String userId;
 	private String encryptedPassword;
-	private String userID;
+	
 
 	public String getFirstName() {
 		return firstName;
@@ -64,12 +64,6 @@ public class UserDTO implements Serializable{
 		this.encryptedPassword = encryptedPassword;
 	}
 
-	public String getUserID() {
-		return userID;
-	}
-
-	public void setUserID(String userID) {
-		this.userID = userID;
-	}
+	
 
 }
